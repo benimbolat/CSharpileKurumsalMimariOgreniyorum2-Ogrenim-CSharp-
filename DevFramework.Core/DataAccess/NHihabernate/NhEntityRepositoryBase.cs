@@ -1,19 +1,20 @@
-﻿using DevFramework.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using NHibernate.Linq; //hibernate 
+using DevFramework.Core.Entities;
+using NHibernate.Linq;
 
 
 namespace DevFramework.Core.DataAccess.NHihabernate
 {
-    public class NhEntityRepositoryBase<TEntity> : IEntityRepository<TEntity>
-        where TEntity : class, IEntity, new()
+    public class NhEntityRepositoryBase<TEntity>:IEntityRepository<TEntity>
+        where TEntity:class,IEntity,new()
     {
         private NHibernateHelper _nHibernateHelper;
+
         public NhEntityRepositoryBase(NHibernateHelper nHibernateHelper)
         {
             _nHibernateHelper = nHibernateHelper;
@@ -21,7 +22,7 @@ namespace DevFramework.Core.DataAccess.NHihabernate
 
         public TEntity Add(TEntity entity)
         {
-            using (var session = _nHibernateHelper.OpenSession())
+            using (var session=_nHibernateHelper.OpenSession())
             {
                 session.Save(entity);
                 return entity;

@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DevFramework.Core.Entities;
 
-namespace DevFramework.Core.DataAccess
+namespace DevFramework.Northwind.Entities.Concrete
 {
-    public interface IQueryableRepository<T> where T:class ,IEntity,new()
+    public class Role:IEntity
     {
-        IQueryable<T> Table { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -7,9 +7,10 @@ using DevFramework.Core.Entities;
 
 namespace DevFramework.Northwind.Entities.Concrete
 {
-    public class Category:IEntity
+    public class UserRole:IEntity
     {
-        public virtual int CategoryId { get; set; }
-        public virtual string CategoryName { get; set; }
+        public int Id { get; set; }
+        public int RoleId { get; set; }
+        public int UserId { get; set; }
     }
 }

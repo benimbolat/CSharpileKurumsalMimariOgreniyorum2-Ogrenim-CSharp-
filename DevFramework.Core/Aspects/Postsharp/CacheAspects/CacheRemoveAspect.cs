@@ -10,7 +10,7 @@ using PostSharp.Aspects;
 namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
 {
     [Serializable]
-    public class CacheRemoveAspect : OnMethodBoundaryAspect
+    public class CacheRemoveAspect:OnMethodBoundaryAspect
     {
         private string _pattern;
         private Type _cacheType;
@@ -21,7 +21,7 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
             _cacheType = cacheType;
         }
 
-        public CacheRemoveAspect(string pattern, Type cacheType)
+        public CacheRemoveAspect(string pattern,Type cacheType)
         {
             _pattern = pattern;
             _cacheType = cacheType;
@@ -41,8 +41,8 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
         public override void OnSuccess(MethodExecutionArgs args)
         {
             _cacheManager.RemoveByPattern(string.IsNullOrEmpty(_pattern)
-                ? string.Format("{0}.{1}.*", args.Method.ReflectedType.Namespace, args.Method.ReflectedType.Name)
-                : _pattern);
+                ?string.Format("{0}.{1}.*",args.Method.ReflectedType.Namespace,args.Method.ReflectedType.Name)
+                :_pattern);
         }
     }
 }

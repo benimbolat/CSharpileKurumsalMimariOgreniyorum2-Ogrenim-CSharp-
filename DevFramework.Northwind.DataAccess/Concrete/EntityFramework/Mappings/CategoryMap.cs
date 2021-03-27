@@ -1,10 +1,10 @@
-﻿using DevFramework.Northwind.Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings
 {
@@ -18,6 +18,5 @@ namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.CategoryId).HasColumnName("CategoryId");
             Property(x => x.CategoryName).HasColumnName("CategoryName");
         }
-
     }
 }

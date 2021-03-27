@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using DevFramework.Northwind.Entities.Concrete;
 
-
 namespace DevFramework.Northwind.Business.Abstract
 {
     public interface IProductService

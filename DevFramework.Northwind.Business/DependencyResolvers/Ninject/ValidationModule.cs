@@ -10,7 +10,7 @@ using Ninject.Modules;
 
 namespace DevFramework.Northwind.Business.DependencyResolvers.Ninject
 {
-    public class ValidationModule : NinjectModule
+    public class ValidationModule:NinjectModule
     {
         public override void Load()
         {

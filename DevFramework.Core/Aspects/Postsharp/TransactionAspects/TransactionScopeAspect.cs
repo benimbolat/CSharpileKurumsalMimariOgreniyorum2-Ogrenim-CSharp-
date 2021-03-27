@@ -9,7 +9,7 @@ using PostSharp.Aspects;
 namespace DevFramework.Core.Aspects.Postsharp.TransactionAspects
 {
     [Serializable]
-    public class TransactionScopeAspect : OnMethodBoundaryAspect
+    public class TransactionScopeAspect:OnMethodBoundaryAspect
     {
         private TransactionScopeOption _option;
         public TransactionScopeAspect(TransactionScopeOption option)
@@ -19,12 +19,12 @@ namespace DevFramework.Core.Aspects.Postsharp.TransactionAspects
 
         public TransactionScopeAspect()
         {
-
+            
         }
 
         public override void OnEntry(MethodExecutionArgs args)
         {
-            args.MethodExecutionTag = new TransactionScope(_option);
+            args.MethodExecutionTag =new TransactionScope(_option);
         }
 
         public override void OnSuccess(MethodExecutionArgs args)

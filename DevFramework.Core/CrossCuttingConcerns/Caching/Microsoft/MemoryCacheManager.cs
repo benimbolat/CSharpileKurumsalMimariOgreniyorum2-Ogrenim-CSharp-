@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft
 {
-    public class MemoryCacheManager : ICacheManager
+    public class MemoryCacheManager:ICacheManager
     {
+
         protected ObjectCache Cache => MemoryCache.Default;
 
         public T Get<T>(string key)
@@ -17,14 +18,14 @@ namespace DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft
             return (T)Cache[key];
         }
 
-        public void Add(string key, object data, int cacheTime = 60)
+        public void Add(string key, object data, int cacheTime=60)
         {
-            if (data == null)
+            if (data==null)
             {
                 return;
             }
 
-            var policy = new CacheItemPolicy { AbsoluteExpiration = DateTime.Now + TimeSpan.FromMinutes(cacheTime) };
+            var policy = new CacheItemPolicy {AbsoluteExpiration = DateTime.Now + TimeSpan.FromMinutes(cacheTime)};
             Cache.Add(new CacheItem(key, data), policy);
         }
 
@@ -40,7 +41,7 @@ namespace DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft
 
         public void RemoveByPattern(string pattern)
         {
-            var regex = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            var regex = new Regex(pattern,RegexOptions.Singleline|RegexOptions.Compiled|RegexOptions.IgnoreCase);
             var keysToRemove = Cache.Where(d => regex.IsMatch(d.Key)).Select(d => d.Key).ToList();
 
             foreach (var key in keysToRemove)

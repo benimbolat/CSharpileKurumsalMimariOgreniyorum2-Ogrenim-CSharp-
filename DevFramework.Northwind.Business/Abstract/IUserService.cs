@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevFramework.Core.DataAccess;
 using DevFramework.Northwind.Entities.ComplexTypes;
 using DevFramework.Northwind.Entities.Concrete;
 
-namespace DevFramework.Northwind.DataAccess.Abstract
+namespace DevFramework.Northwind.Business.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface IUserService
     {
-        List<ProductDetail> GetProductDetails();
+        User GetByUserNameAndPassword(string userName, string password);
+        List<UserRoleItem> GetUserRoles(User user);
     }
 }

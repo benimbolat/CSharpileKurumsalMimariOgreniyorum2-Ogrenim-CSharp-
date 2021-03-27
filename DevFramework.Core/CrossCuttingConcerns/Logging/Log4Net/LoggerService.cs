@@ -1,12 +1,13 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
 
 namespace DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net
 {
+    [Serializable]
     public class LoggerService
     {
         private ILog _log;
@@ -15,27 +16,12 @@ namespace DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net
         {
             _log = log;
         }
-        public bool IsInfoEnabled
-        {
-            get { return _log.IsInfoEnabled; }
-        }
-        public bool IsDebugEnabled
-        {
-            get { return _log.IsDebugEnabled; }
-        }
-        public bool IsWarnEnabled
-        {
-            get { return _log.IsWarnEnabled; }
-        }
-        public bool IsFatalEnabled
-        {
-            get { return _log.IsFatalEnabled; }
-        }
-        public bool IsErrorEnabled
-        {
-            get { return _log.IsErrorEnabled; }
-        }
 
+        public bool IsInfoEnabled => _log.IsInfoEnabled;
+        public bool IsDebugEnabled => _log.IsDebugEnabled;
+        public bool IsWarnEnabled => _log.IsWarnEnabled;
+        public bool IsFatalEnabled => _log.IsFatalEnabled;
+        public bool IsErrorEnabled => _log.IsFatalEnabled;
 
         public void Info(object logMessage)
         {

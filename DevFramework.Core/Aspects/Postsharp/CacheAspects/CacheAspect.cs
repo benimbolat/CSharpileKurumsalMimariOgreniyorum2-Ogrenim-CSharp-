@@ -10,13 +10,13 @@ using PostSharp.Aspects;
 namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
 {
     [Serializable]
-    public class CacheAspect : MethodInterceptionAspect
+    public class CacheAspect:MethodInterceptionAspect
     {
         private Type _cacheType;
         private int _cacheByMinute;
         private ICacheManager _cacheManager;
 
-        public CacheAspect(Type cacheType, int cacheByMinute = 60)
+        public CacheAspect(Type cacheType, int cacheByMinute=60)
         {
             _cacheType = cacheType;
             _cacheByMinute = cacheByMinute;
@@ -24,11 +24,11 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
 
         public override void RuntimeInitialize(MethodBase method)
         {
-            if (typeof(ICacheManager).IsAssignableFrom(_cacheType) == false)
+            if (typeof(ICacheManager).IsAssignableFrom(_cacheType)==false)
             {
                 throw new Exception("Wrong Cache Manager");
             }
-            _cacheManager = (ICacheManager)Activator.CreateInstance(_cacheType);
+            _cacheManager = (ICacheManager) Activator.CreateInstance(_cacheType);
 
             base.RuntimeInitialize(method);
         }
@@ -49,7 +49,7 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
                 args.ReturnValue = _cacheManager.Get<object>(key);
             }
             base.OnInvoke(args);
-            _cacheManager.Add(key, args.ReturnValue, _cacheByMinute);
+            _cacheManager.Add(key,args.ReturnValue,_cacheByMinute);
 
         }
     }
