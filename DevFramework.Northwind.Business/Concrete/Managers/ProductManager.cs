@@ -15,7 +15,8 @@ using DevFramework.Core.Aspects.Postsharp.TransactionAspects;
 using DevFramework.Core.Aspects.Postsharp.ValidationAspects;
 using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Core.DataAccess;
-
+using System.Data.Entity.Infrastructure.Interception;
+using DevFramework.Core.Aspects.Postsharp.LogAspects;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
@@ -29,6 +30,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
