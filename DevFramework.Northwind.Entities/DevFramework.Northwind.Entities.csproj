@@ -58,10 +58,22 @@
     <Compile Include="Concrete\Role.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Concrete\UserRole.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\DevFramework.Core.dll.config" />
+    <None Include="bin\Debug\DevFramework.Northwind.Entities.dll.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\DevFramework.Northwind.Entities.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DevFramework.Northwind.Entities.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\DevFramework.Northwind.Entities.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +81,66 @@
       <Project>{7b149b68-2bef-4ca6-8104-99685d0cc17c}</Project>
       <Name>DevFramework.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AutoMapper.dll" />
+    <Content Include="bin\Debug\AutoMapper.xml" />
+    <Content Include="bin\Debug\cs\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\da\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\DevFramework.Core.dll" />
+    <Content Include="bin\Debug\DevFramework.Core.pdb" />
+    <Content Include="bin\Debug\DevFramework.Northwind.Entities.dll" />
+    <Content Include="bin\Debug\DevFramework.Northwind.Entities.pdb" />
+    <Content Include="bin\Debug\de\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\es\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\fa\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\fi\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\FluentValidation.dll" />
+    <Content Include="bin\Debug\FluentValidation.pdb" />
+    <Content Include="bin\Debug\FluentValidation.xml" />
+    <Content Include="bin\Debug\fr\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\Iesi.Collections.dll" />
+    <Content Include="bin\Debug\Iesi.Collections.xml" />
+    <Content Include="bin\Debug\it\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\ko\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\log4net.xml" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\mk\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\NHibernate.dll" />
+    <Content Include="bin\Debug\NHibernate.xml" />
+    <Content Include="bin\Debug\Ninject.dll" />
+    <Content Include="bin\Debug\Ninject.xml" />
+    <Content Include="bin\Debug\nl\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\pl\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\PostSharp.dll" />
+    <Content Include="bin\Debug\PostSharp.xml" />
+    <Content Include="bin\Debug\pt\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\ru\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\sv\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="bin\Debug\System.Web.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="bin\Debug\tr\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\zh-CN\FluentValidation.resources.dll" />
+    <Content Include="obj\Debug\DevFramework.Northwind.Entities.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DevFramework.Northwind.Entities.dll" />
+    <Content Include="obj\Debug\DevFramework.Northwind.Entities.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
